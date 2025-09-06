@@ -5,8 +5,13 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-md border-b-2 border-amber-200 rounded-b-2xl">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <h1 className="text-4xl font-extrabold text-amber-600 italic tracking-wide">
-          Microsys
+        <h1 className="flex items-center text-4xl font-extrabold text-amber-600 italic tracking-wide gap-3">
+          <img
+            src="/logo.jpg"
+            alt="Logo"
+            className="h-10 w-10 object-contain align-middle"
+          />
+          <span className="align-middle">Microsys</span>
         </h1>
 
         <nav className="flex gap-6">
