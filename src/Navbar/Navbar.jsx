@@ -11,7 +11,7 @@ const Navbar = () => {
             alt="Logo"
             className="h-10 w-10 object-contain align-middle"
           />
-          <span className="align-middle">Microsys</span>
+          <span className="align-middle">Microsys Computers</span>
         </h1>
 
         <nav className="flex gap-6">
