@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100 relative overflow-hidden px-6 py-12">
-      {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -20,7 +19,10 @@ const About = () => {
           <span className="font-semibold">two decades</span>. Established with a
           mission to empower students through knowledge and practical learning,
           Microsys has helped thousands of learners excel in{" "}
-          <span className="font-bold">MS-CIT, programming, and digital skills</span>.
+          <span className="font-bold">
+            MS-CIT, programming, and digital skills
+          </span>
+          .
           <br />
           <br />
           With expert faculty, personalized attention, and modern teaching
@@ -29,7 +31,6 @@ const About = () => {
         </p>
       </motion.div>
 
-      {/* Class Info */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -48,15 +49,28 @@ const About = () => {
             <span className="font-semibold">📞 Contact:</span> +91 9822683958
           </p>
           <p>
-            <span className="font-semibold">📚 Course:</span> MS-CIT (Information
-            Technology Literacy) by MKCL, introduced in 2001, is Maharashtra’s
-            most popular IT course — designed to provide computer literacy to
-            students, professionals, and homemakers alike.
+            <span className="font-semibold">📚 Course:</span> MS-CIT
+            (Information Technology Literacy) by MKCL, introduced in 2001, is
+            Maharashtra’s most popular IT course — designed to provide computer
+            literacy to students, professionals, and homemakers alike.
           </p>
+
+          {/* Google Maps Embed */}
+          <div className="w-full h-96 rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.9996379543777!2d72.7591403036906!3d19.79761270273852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71ef7706d0e39%3A0xb9b9de147030f544!2sMicrosys%20Computers!5e0!3m2!1sen!2sin!4v1757167758922!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Microsys Computers Location"
+            ></iframe>
+          </div>
         </div>
       </motion.div>
 
-      {/* Tutors Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -68,22 +82,24 @@ const About = () => {
         </h3>
         <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-10">
           Our tutors are highly experienced professionals who bring{" "}
-          <span className="font-semibold text-amber-600">knowledge, patience,</span> 
+          <span className="font-semibold text-amber-600">
+            knowledge, patience,
+          </span>
           and <span className="font-semibold text-amber-600">passion</span> into
           every classroom. With strong academic qualifications and years of
           teaching expertise, they ensure that students gain both{" "}
-          <span className="font-semibold">theoretical and practical skills.</span>
+          <span className="font-semibold">
+            theoretical and practical skills.
+          </span>
         </p>
       </motion.div>
 
-      {/* Faculty Section */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-16"
       >
-        {/* Tutor 1 */}
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
@@ -101,7 +117,6 @@ const About = () => {
           <p className="text-gray-600">✉️ swati.churi777@gmail.com</p>
         </motion.div>
 
-        {/* Tutor 2 */}
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="flex flex-col items-center text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
@@ -120,7 +135,103 @@ const About = () => {
         </motion.div>
       </motion.div>
 
-      {/* Message Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="mb-16 max-w-6xl mx-auto"
+      >
+        <h3 className="text-3xl font-bold text-gray-800 mb-10 text-center">
+          What Our Students Say
+        </h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+          >
+            <h4 className="text-xl font-semibold text-gray-800 mb-2">
+              ⭐️⭐️⭐️⭐️⭐️
+            </h4>
+            <p className="text-gray-600 italic mb-4">
+              "The teaching style is excellent and interactive. I gained a lot
+              of confidence in computers. Highly recommend Microsys Computers!"
+            </p>
+            <p className="font-bold text-amber-600">– Mayuri Yashwantrao</p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+          >
+            <h4 className="text-xl font-semibold text-gray-800 mb-2">
+              ⭐️⭐️⭐️⭐️⭐️
+            </h4>
+            <p className="text-gray-600 italic mb-4">
+              "Best learning environment with supportive tutors. I suggest
+              everyone join Microsys Computers."
+            </p>
+            <p className="font-bold text-amber-600">– Amisha Gharat</p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+          >
+            <h4 className="text-xl font-semibold text-gray-800 mb-2">
+              ⭐️⭐️⭐️⭐️⭐️
+            </h4>
+            <p className="text-gray-600 italic mb-4">
+              "Amazing classes! Tutors explain concepts very clearly. Microsys
+              helped me a lot in my studies."
+            </p>
+            <p className="font-bold text-amber-600">– Vaibhavi Patil</p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+          >
+            <h4 className="text-xl font-semibold text-gray-800 mb-2">
+              ⭐️⭐️⭐️⭐️⭐️
+            </h4>
+            <p className="text-gray-600 italic mb-4">
+              "The courses are very practical and useful. I enjoyed learning
+              here and recommend Microsys Computers to all."
+            </p>
+            <p className="font-bold text-amber-600">– Prapti Churi</p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+          >
+            <h4 className="text-xl font-semibold text-gray-800 mb-2">
+              ⭐️⭐️⭐️⭐️⭐️
+            </h4>
+            <p className="text-gray-600 italic mb-4">
+              "Microsys Computers provides the best computer education with
+              excellent guidance. I feel lucky to join here."
+            </p>
+            <p className="font-bold text-amber-600">– Aadarsh Shrivastav</p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-6 rounded-2xl shadow-lg text-center"
+          >
+            <h4 className="text-xl font-semibold text-gray-800 mb-2">
+              ⭐️⭐️⭐️⭐️⭐️
+            </h4>
+            <p className="text-gray-600 italic mb-4">
+              "Friendly teachers and modern teaching methods make learning very
+              easy. I strongly recommend Microsys Computers."
+            </p>
+            <p className="font-bold text-amber-600">-Neha Pagdhare</p>
+          </motion.div>
+        </div>
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -5,6 +5,7 @@ import Home from "./Home/Home";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
 import Courses from "./Courses/Courses";
+import Certification from "./Certification/Certification";
 
 import Navbar from "./Navbar/Navbar";
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/certificates" element={<Certification />} />
         <Route path="/tally" element={<Tallypage />} />
         <Route path="/mscIT" element={<Mscitpage />} />
         <Route path="/excel" element={<ExcelPage />} />
