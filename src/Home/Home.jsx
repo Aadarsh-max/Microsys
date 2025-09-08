@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -105,13 +106,15 @@ const Home = () => {
                   : "translate-y-6 opacity-0"
               }`}
             >
-              <button className="group relative overflow-hidden bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-semibold text-lg">
+              <Link to='/courses'>
+              <button className="cursor-pointer group relative overflow-hidden bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-semibold text-lg">
                 <span className="relative z-10">Get Started</span>
-
+               
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
 
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-50 transition-opacity duration-300 -z-10"></div>
               </button>
+              </Link>
             </div>
 
             <div

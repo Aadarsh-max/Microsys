@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const courses = [
   { id: 1, name: 'MSCIT', duration: '2 months', path: '/mscIT', image: '/mscit.jpg.webp' },
-  { id: 2, name: 'Tally', duration: '120 hours - 3 months', path: '/tally', image: '/tt.png' },
+  { id: 2, name: 'Tally', duration: '3 months', path: '/tally', image: '/tt.png' },
   { id: 3, name: 'Advance Excel', duration: '2 months', path: '/excel', image: '/excel.jpg' },
   { id: 4, name: 'C++', duration: '3 months', path: '/cpp', image: '/c.jpg' },
 ];
@@ -26,10 +26,10 @@ const Courses = () => {
                 animation: 'fadeInUp 0.8s ease-out forwards'
               }}
             >
-              {/* Animated background overlay */}
+            
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-200/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out"></div>
               
-              {/* Image Section - Larger */}
+        
               <div className="md:w-2/5 mb-6 md:mb-0 relative overflow-hidden rounded-2xl">
                 <img
                   src={course.image}
@@ -39,7 +39,7 @@ const Courses = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
              
-              {/* Content Section */}
+       
               <div className="md:w-3/5 md:pl-8 flex flex-col justify-center relative z-10">
                 <h3 className="text-3xl font-bold text-amber-600 mb-3 group-hover:text-amber-700 transition-colors duration-500 transform group-hover:translate-x-2">
                   {course.name}
@@ -51,7 +51,7 @@ const Courses = () => {
                   Click to know more about {course.name} course.
                 </p>
                 
-                {/* Animated arrow */}
+          
                 <div className="mt-4 flex items-center text-amber-600 group-hover:text-amber-700 transition-colors duration-500">
                   <span className="text-sm font-medium">Learn More</span>
                   <svg 
@@ -65,7 +65,7 @@ const Courses = () => {
                 </div>
               </div>
               
-              {/* Subtle corner accent */}
+     
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-amber-300/30 to-transparent rounded-bl-full transform group-hover:scale-150 transition-transform duration-700"></div>
             </div>
           </Link>
