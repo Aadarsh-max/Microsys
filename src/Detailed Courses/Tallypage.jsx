@@ -7,48 +7,48 @@ const sections = [
     title: "Introduction",
     subtitle: "Master Tally Prime with GST",
     text: `KLiC Tally Prime with GST is a job-oriented course by MKCL providing complete knowledge of accounting, taxation, and GST compliance using Tally Prime. Perfect for students, professionals, and entrepreneurs, this course equips learners with practical skills to manage accounts efficiently.`,
-    gradient: "from-amber-600 to-amber-400",
-    bgGradient: "from-amber-50 to-amber-100"
+    gradient: "from-green-500 to-emerald-400",
+    bgGradient: "from-green-50 to-emerald-50"
   },
   {
     icon: Clock,
     title: "Course Duration",
     subtitle: "Flexible 2–3 Months Program",
     text: `Typically completed in 2–3 months, this course combines theory, hands-on practice, and assignments to help learners gain real-world accounting and GST expertise.`,
-    gradient: "from-amber-600 to-amber-400",
-    bgGradient: "from-amber-50 to-amber-100"
+    gradient: "from-green-500 to-emerald-400",
+    bgGradient: "from-green-50 to-emerald-50"
   },
   {
     icon: Award,
     title: "Importance of Tally Prime",
     subtitle: "Boost Your Career & Business",
     text: `Tally Prime with GST is widely used by businesses of all sizes for accounting and compliance. Mastering Tally ensures employment readiness in accounts, finance, and administration while keeping learners up-to-date with GST rules and practical applications.`,
-    gradient: "from-amber-600 to-amber-400",
-    bgGradient: "from-amber-50 to-amber-100"
+    gradient: "from-green-500 to-emerald-400",
+    bgGradient: "from-green-50 to-emerald-50"
   },
   {
     icon: TrendingUp,
     title: "Course Info & Topics",
     subtitle: "Practical & Job-Oriented Learning",
     text: `Topics include Accounting Basics, Company Creation, Ledger Management, Vouchers, Invoices, GST Concepts & Reports, Inventory Management, Bank Reconciliation, MIS Reports, and Payroll (optional). Learners gain practical expertise with Tally software.`,
-    gradient: "from-amber-600 to-amber-400",
-    bgGradient: "from-amber-50 to-amber-100"
+    gradient: "from-green-500 to-emerald-400",
+    bgGradient: "from-green-50 to-emerald-50"
   },
   {
     icon: Monitor,
     title: "Future Advancements",
     subtitle: "Cloud Accounting & Automation",
     text: `As digital accounting evolves, the course integrates cloud accounting, e-invoicing, automation, and updates aligned with the latest Tally Prime and GST regulations, keeping learners industry-ready.`,
-    gradient: "from-amber-600 to-amber-400",
-    bgGradient: "from-amber-50 to-amber-100"
+    gradient: "from-green-500 to-emerald-400",
+    bgGradient: "from-green-50 to-emerald-50"
   },
   {
     icon: Users,
     title: "Learning & Expert Guidance",
     subtitle: "Hands-On Training & Certification",
     text: `Learn from MKCL-certified trainers in modern labs with interactive e-learning, assignments, mini-projects, and practical sessions. By the end of the course, learners can manage accounts, file GST, generate reports, and handle business operations confidently using Tally Prime.`,
-    gradient: "from-amber-600 to-amber-400",
-    bgGradient: "from-amber-50 to-amber-100"
+    gradient: "from-green-500 to-emerald-400",
+    bgGradient: "from-green-50 to-emerald-50"
   },
 ];
 
@@ -58,7 +58,7 @@ const Tallypage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-amber-600 text-white">
+      <div className="relative overflow-hidden bg-gradient-to-r from-green-600 to-emerald-500 text-white">
         <div className="relative px-6 md:px-16 py-20 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             KLiC Tally Prime with GST
@@ -113,7 +113,7 @@ const Tallypage = () => {
                           >
                             {section.title}
                           </h2>
-                          <p className="text-gray-600 font-medium">
+                          <p className="text-gray-700 font-medium">
                             {section.subtitle}
                           </p>
                         </div>
@@ -132,9 +132,9 @@ const Tallypage = () => {
       </div>
 
       {/* Bottom Image Section */}
-      <div className="px-6 md:px-16 py-16 bg-amber-50">
+      <div className="px-6 md:px-16 py-16 bg-gradient-to-r from-green-100 to-emerald-100">
         <div className="max-w-4xl mx-auto">
-          <div className="w-full h-64 bg-amber-100 rounded-3xl flex items-center justify-center overflow-hidden shadow-inner">
+          <div className="w-full h-64 bg-white border-4 border-green-400 rounded-3xl flex items-center justify-center overflow-hidden shadow-inner">
             <img
               src="./tally.webp"
               alt="Tally Prime"
