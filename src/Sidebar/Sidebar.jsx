@@ -1,51 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BookOpen, FileSpreadsheet, Code, Info, LayoutGrid } from "lucide-react";
+import {
+  BookOpen,
+  FileSpreadsheet,
+  Code,
+  Info,
+  LayoutGrid,
+  Menu,
+  X,
+} from "lucide-react";
 
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="h-screen w-64 bg-white shadow-lg flex flex-col py-8 px-6 border-r border-gray-200">
-      <h2 className="text-2xl font-bold text-amber-600 mb-10 text-center">
-        Courses
-      </h2>
-      
-      <nav className="flex flex-col space-y-6">
-        <Link
-          to="/mscITinfo"
-          className="flex items-center gap-3 text-lg font-medium text-gray-700 hover:text-amber-600 hover:translate-x-1 transition-transform"
-        >
-          <LayoutGrid size={20} /> MSCIT
-        </Link>
+    <>
+      <button
+        className="md:hidden fixed top-4 left-4 z-50 bg-amber-600 text-white p-2 rounded-lg shadow-lg"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
 
-        <Link
-          to="/tallyinfo"
-          className="flex items-center gap-3 text-lg font-medium text-gray-700 hover:text-amber-600 hover:translate-x-1 transition-transform"
-        >
-          <FileSpreadsheet size={20} /> Tally
-        </Link>
+      <div
+        className={`top-0 left-0 h-screen w-64 bg-white shadow-xl flex flex-col py-8 px-6 border-r border-gray-200 transform transition-transform duration-300 z-40
+        ${
+          isOpen ? "fixed translate-x-0" : "fixed -translate-x-full"
+        } md:static md:translate-x-0`}
+      >
+        <h2 className="text-3xl font-extrabold bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent mb-12 text-center tracking-wide">
+          Courses
+        </h2>
 
-        <Link
-          to="/advanceexcelinfo"
-          className="flex items-center gap-3 text-lg font-medium text-gray-700 hover:text-amber-600 hover:translate-x-1 transition-transform"
-        >
-          <BookOpen size={20} /> Advance Excel
-        </Link>
+        <nav className="flex flex-col space-y-4">
+          <Link
+            to="/mscITinfo"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 text-lg font-semibold text-gray-700 px-3 py-2 rounded-xl hover:bg-amber-100 hover:text-amber-600 transition-all duration-200"
+          >
+            <LayoutGrid size={20} /> MSCIT
+          </Link>
 
-        <Link
-          to="/cppinfo"
-          className="flex items-center gap-3 text-lg font-medium text-gray-700 hover:text-amber-600 hover:translate-x-1 transition-transform"
-        >
-          <Code size={20} /> C++
-        </Link>
+          <Link
+            to="/tallyinfo"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 text-lg font-semibold text-gray-700 px-3 py-2 rounded-xl hover:bg-green-100 hover:text-green-600 transition-all duration-200"
+          >
+            <FileSpreadsheet size={20} /> Tally
+          </Link>
 
-        <Link
-          to="/knowmoreinfo"
-          className="flex items-center gap-3 text-lg font-medium text-gray-700 hover:text-amber-600 hover:translate-x-1 transition-transform"
-        >
-          <Info size={20} /> Know More
-        </Link>
-      </nav>
-    </div>
+          <Link
+            to="/advanceexcelinfo"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 text-lg font-semibold text-gray-700 px-3 py-2 rounded-xl hover:bg-green-600 hover:text-white transition-all duration-200"
+          >
+            <BookOpen size={20} /> Advance Excel
+          </Link>
+
+          <Link
+            to="/cppinfo"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 text-lg font-semibold text-gray-700 px-3 py-2 rounded-xl hover:bg-blue-400 hover:text-white transition-all duration-200"
+          >
+            <Code size={20} /> C++
+          </Link>
+
+          <Link
+            to="/knowmoreinfo"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 text-lg font-semibold text-gray-700 px-3 py-2 rounded-xl hover:bg-purple-100 hover:text-purple-600 transition-all duration-200"
+          >
+            <Info size={20} /> Know More
+          </Link>
+        </nav>
+      </div>
+    </>
   );
 };
 
